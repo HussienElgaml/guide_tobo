@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/css.css">
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="Neighborhood Map Project" content="Sehs's Grandfather House  Neighbors In London">
+
+    <title>Neighborhood Map</title>
+     <h4 style="text-shadow: 3px 2px red; text-align: center;"> hallo in sehs maps </h4>
+</head>
+
+<body>
+
+    <div class="container-fluid h-100">
+        <div class="row h-100" style="background-color: coral;">
+            <main class="col p-0 navbar-inverse">
+                <a href class="float-right m-3 navbar-light" data-target="#sidebar" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="content bg-inverse">
+                    <div id="map">
+                        <p class="map_error"></p>
+                    </div>
+                </div>
+            </main>
+            <nav class="collapse bg-inverse pt-2 h-100 sidebar_widt" id="sidebar" >
+                <h4 class="app_name text-white">Neighborhood Map</h4>
+                <input class="search" data-bind="textInput: searchOption, valueUpdate: 'afterkeydown'" placeholder="Search Locations...">
+                <hr class="side_hr">
+                <ul class="nav flex-column" data-bind="foreach: myLocationsFilter">
+                    <a href="#"><li class="nav-item text-white places_list" data-bind="text: title, click: $parent.populateAndBounceMarker"></li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+ <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
+    </script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyASiGxTRHmA_8TjMrmBbLyDFxptq28cfmU&callback=startApp"
+        onerror="googleError">
+    </script>
+    <script
+        src="js/knockout-3.4.2.js" charset="utf-8">
+    </script>
+    <script
+        src="js/styles.js" charset="utf-8">
+    </script>
+    <script
+        src="js/script.js" charset="utf-8">
+    </script>
+ 
+</body>
+</html>
